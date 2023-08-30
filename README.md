@@ -3,7 +3,7 @@ fylkeskommunene](https://www.regjeringen.no/contentassets/e8645ebe0e02470da89253
 
 Fordelen er at metodikken blir enkel - og dermed robust, samt konsistent med slik det er gjort tidligere. 
 
-Ulempen er at en del av tallene - lengder og mengder - avviker fra virkeligheten, vel og merke slik virkeligheten er modellert i NVDB og BRUTUS. For eksempel er lengden på vegnettet ikke konsistent med KOSTRA-metodikk for å beregne lengde av fylkesvegnettet. Videre er det en del spørsmål om hvilke lengder som skal inkludere ferjestrekninger, konnekteringslenker, _adskilte løp = MOT_ og lignende. Disse spørsmålene er oppsummert i [problemer og dilemma med Vianova-metoden](./problemer.md)
+Ulempen er at en del av tallene - lengder og mengder - avviker fra virkeligheten, vel og merke slik virkeligheten blir modellert i NVDB og BRUTUS. For eksempel er lengden på vegnettet ikke konsistent med KOSTRA-metodikk for å beregne lengde av fylkesvegnettet. Videre er det en del spørsmål om hvilke lengder som skal inkludere ferjestrekninger, konnekteringslenker, _adskilte løp = MOT_ og lignende. Disse spørsmålene er oppsummert i [problemer og dilemma med Vianova-metoden](./problemer.md)
 
 
 
