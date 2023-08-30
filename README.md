@@ -13,7 +13,7 @@ Min evaluering av datauttaket i juni, der jeg avdekket flere feil, er i [dette P
 | Trafikkarbeid (mill kjøretøykm)	        | Ingen | Forvirring rundt trafikkarbeid _per døgn_ vs _per år_  | 
 | Lengde Ådt > 4000 (km)	| Ingen |  | 
 | Lengde Ådt > 1500 (km)	| Ingen |  | 
-| Rekkverk (lm)	| Liten | Tallmessig stor for noen fylker | 
+| Rekkverk (lm)	| Stor | Rekkverk langs G/s veg, samt filtrering på eier | 
 | Lyspunkt i dagen (antall)	| Ingen |  | 
 | Lengde ikke-undersjøiske tunnelløp (m)	| Stor | Feil på summering av lengde-egenskap  | 
 | Lengde undersjøiske tunnelløp (m)	| Bagatellmessig | Samme feil, men lite utslag | 

@@ -15,23 +15,16 @@ rekk = gpd.read_file('../resultater/rekkverkFv.gpkg', layer='rekkverk' )
 
 # OBS! Ved datauttak juni 2023 filtrerte vi ikke for 
 # Eier = Fylkeskommune, Stat, Statens vegvesen og (tom)
-# Ref vianova-rapport s 32. Dette må rettes opp. 
-# Blir noe slikt som 
+# Ref vianova-rapport s 32, eller for trafikantgruppe = K 
+# Dette må rettes opp. 
 rekk['Eier'].fillna( '(tom)', inplace=True )
 rekk_orginal = rekk.copy()
 rekk = rekk[ (rekk['Eier'] == 'Fylkeskommune' ) | 
              (rekk['Eier'] == 'Stat, Statens vegvesen' ) | 
              (rekk['Eier'] == '(tom)' )]
 
-# med_lengde = rekk[ ~rekk['Lengde'].isnull()].copy()
-# uten_lengde = rekk[ rekk['Lengde'].isnull()].copy()
-# med_lengde.drop_duplicates( subset='nvdbId', inplace=True )
-# agg_med_lengde = med_lengde.groupby( 'fylke').agg( {'Lengde' : 'sum' } ).reset_index()
-# agg_uten_Lengde = uten_lengde.groupby( 'fylke').agg( {'segmentlengde' : 'sum'} ).reset_index()
-# joined = pd.merge( agg_med_lengde, agg_uten_Lengde, on='fylke', how='inner')
-# joined['Rekkverk (lm)'] = (joined['Lengde'] + joined['segmentlengde']  )
-
-# skrivdataframe.skrivdf2xlsx( joined, '../resultater/verifiserRekkverk.xlsx' )
+# Trafikantgruppe = K
+rekk = rekk[ rekk['trafikantgruppe'] == 'K'].copy()
 
 #-----------------------------------------------------------------------------------------
 # 2024-fylker
