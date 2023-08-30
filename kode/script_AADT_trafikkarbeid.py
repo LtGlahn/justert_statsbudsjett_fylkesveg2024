@@ -24,7 +24,7 @@ t0 = datetime.now()
 # %% 
 
 # myGdf.to_file( '../resultater/vegnettFV.gpkg', layer='AADT', driver='GPKG')
-myGdf = gpd.read_file( '../resultater/vegnettFV.gpkg', layer='AADT')
+myGdf = gpd.read_file( '../../statsbudsjett_fylkesveg2023/resultater/vegnettFV.gpkg', layer='AADT')
 
 # %% 
 # telling = myGdf.groupby( ['fylke' ]).agg( { 'segmentlengde' : 'sum'} ).reset_index()  
@@ -60,8 +60,9 @@ over4000adt.rename( columns={'segmentlengde' : 'Lengde Ådt > 4000 (km)'} , inpl
 over4000adt['Lengde Ådt > 4000 (km)'] = over4000adt['Lengde Ådt > 4000 (km)'] / 1000
 
 
-
-myGdf['kjoretoyKm'] = myGdf['segmentlengde'] * myGdf['ÅDT, total'] * 365 / 1000
+# Vianova definerer trafikkarbeid PER DØGN, ikke per år
+# myGdf['kjoretoyKm'] = myGdf['segmentlengde'] * myGdf['ÅDT, total'] * 365 / 1000
+myGdf['kjoretoyKm'] = myGdf['segmentlengde'] * myGdf['ÅDT, total']  / 1000
 trafikkArb = myGdf.groupby([ 'fylke'] ).agg( {'segmentlengde' : 'sum', 'kjoretoyKm' : 'sum' } ).reset_index()
 trafikkArb['Trafikkarbeid (mill kjøretøykm)'] = trafikkArb['kjoretoyKm'] / 1e6
 trafikkArb['Lengde veg som har ÅDT-data (km)'] = trafikkArb['segmentlengde'] / 1000
