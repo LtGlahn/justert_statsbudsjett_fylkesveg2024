@@ -5,7 +5,22 @@ Fordelen er at metodikken blir enkel - og dermed robust, samt konsistent med sli
 
 Ulempen er at en del av tallene - lengder og mengder - avviker fra virkeligheten, vel og merke slik virkeligheten blir modellert i NVDB og BRUTUS. For eksempel er lengden på vegnettet ikke konsistent med KOSTRA-metodikk for å beregne lengde av fylkesvegnettet. Videre er det en del spørsmål om hvilke lengder som skal inkludere ferjestrekninger, konnekteringslenker, _adskilte løp = MOT_ og lignende. Disse spørsmålene er oppsummert i [problemer og dilemma med Vianova-metoden](./problemer.md)
 
-Min evaluering av datauttaket i juni, der jeg avdekket flere feil, er i [dette PDF-dokumentet](./GjennomgangkriteriedataFv.pdf)
+Min evaluering av datauttaket i juni, der jeg avdekket flere feil, er i [dette PDF-dokumentet](./GjennomgangkriteriedataFv.pdf). Her er en kort oppsummering av forskjellen etter revisjon:
+
+| Parameter | Justering | Kommentar |
+|---|---|---|
+| Feltlengde (km)	                        | Stor justering | Bilferjer skal tas med i feltlengde | 
+| Trafikkarbeid (mill kjøretøykm)	        | Ingen | Forvirring rundt trafikkarbeid _per døgn_ vs _per år_  | 
+| Lengde Ådt > 4000 (km)	| Ingen |  | 
+| Lengde Ådt > 1500 (km)	| Ingen |  | 
+| Rekkverk (lm)	| Liten | Tallmessig stor for noen fylker | 
+| Lyspunkt i dagen (antall)	| Ingen |  | 
+| Lengde ikke-undersjøiske tunnelløp (m)	| Stor | Feil på summering av lengde-egenskap  | 
+| Lengde undersjøiske tunnelløp (m)	| Bagatellmessig | Samme feil, men lite utslag | 
+| Lengde bruer av stål (m)	| Stor | Cirka 3% | 
+| Lengde bruer av andre materialtyper enn stål (m)	| Stor | Cirka 6% | 
+| Ferjekaibruer og tilleggskaier (antall)	G/S-veglengde (km)	| Ingen |  | 
+| Veg med fartsgrense 50 km/t eller lavere (km)| Ingen |  | 
 
 
 
