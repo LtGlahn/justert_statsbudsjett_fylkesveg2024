@@ -11,15 +11,7 @@ Her er Lødingen ferjekai slik den er modellert i dag, med et objekt av typen 41
 ![Lødingen ferjekai i dag](./bilder/lødingenFK-idag.png)
 
 Her er Lødingen ferjekai modellert i 2015, uten ferjeoppstillingsplass-objekt, men med et mer komplisert vegnett og cirka en kilometer lengre verdi for _feltlengde_. Ferjeoppstillingsplasser er her modellert med kjørefelttypen O på vegnettet. [Vegkart-søk](https://vegkart.atlas.vegvesen.no/#kartlag:nib/@540733,7590055,15/vegnett:metrering~+()~/vegsystemreferanse:541194.761:7590049.972/n%C3%A5r:*2015-08-30~) 
-![Lødingen ferjekai i 2015](./bilder/lødingenFK-2015.png)
-  * **Vegutstyr langs gang- og sykkelveger** Joda, gang- og sykkelveger er beskrevet som en egen parameter. 
-    * Men når vi ser på datauttaket av rekkverk, belysningspunkt og bru så er inntrykket like fullt at budsjettmodellen ikke i tilstrekkelig grad tar høyde for driftsutgifter langs gang- og sykkelveger. 
-    * For gående og syklende har det også vært en tilvekst av mulige veglenketyper (type veg). I tillegg til _Gang og sykkelveg_ har vi blant annet disse: 
-      * Gangveg
-      * Sykkelveg 
-      * Gangfelt 
-      * Trapp
-    * For meg er det iallfall opplagt at denne typen revisjon av vegnettsmodell burde utløse en revisjon av datauttak og budsjettmodell. Dette virker kanskje pirkete, men det er opplagt driftsutgifter knyttet til vegutstyr og brøyting langs disse veglenketypene.   
+![Lødingen ferjekai i 2015](./bilder/lødingenFK-2015.png) 
   * **Lyspunkt i dagen** Her gjøres det en raffinert filtrering på egenskapen _Bruksområde_ til objekttypen _Belysningspunkt_: 7 av 16 mulige verdier + mangler verdi. Burde dette filteret vært revidert?  
     * Burde f.eks bruksområde = _Belysning gang/sykkelveg_ vært med? 
   * **Konnekteringslenker**: Lengde vegnett og feltlengde – her pleier vi NVDB-fagfolk la være å telle konnekteringslenker, som er biten mellom vegkant og senterlinje i vegkryss, dvs den biten som «mangler» når en veg skal knyttes sammen med en annen. Disse utgjør erfaringsmessig cirka en halv prosent av lengden vegnettet. For fylkesveger utgjør konnekteringslenkene cirka 57 km. Vestland fylke har mest (8,2km), fulgt av nye Innlandet (7,5km). Ikke all verden betydning, men det hadde vært greit å være konsistent med f.eks KOSTRA-rapportering.
@@ -43,6 +35,7 @@ Her er Lødingen ferjekai modellert i 2015, uten ferjeoppstillingsplass-objekt, 
     * **Tunnelløp for gående og syklende** inngår ikke i datauttaket eller økonomimodellen. I juni 2023 utgjorde dette 6 tunneller med samlet lengde på 878 meter. I juli åpnet _Fyllingsdalentunnel GS tunnel_, som er på ytterligere 3km. Dette er et komplisert tunnelanlegg med masse utstyr (lys, overvåkning m.m) og tilhørende driftsutgifter. Denne tunnelen har veglenketypen _Sykkelveg_, som ikke beskrevet på noen måte i noen av datauttaket, og heller ikke inngår i datauttaket _lengde gang/sykkelveg_ (som jo tar ut veglenketypen _Gang/sykkelveg_, ikke _Sykkelveg_). 
     * **Håndtering av nye veglenketyper** I varierende grad er det knyttet utgifter til vedlikehold av veglenketypene _Sykkelveg_, _Gangveg_, _Fortau_ og _Trapp_. Bør modellen justeres for dette? 
     * **Rekkverk langs gang- og sykkelsti** blir ikke tatt med i beregningsmodellen (filteret _trafikantgruppe = K_). Er dette riktig?  
+    * **Tar datauttaket tilstrekkelig høyde for vegutstyr langs G/S veg?** Joda, økonomimodellen har med _Lengde G/S veg_ som parameter (og som burde vært revidert med nye veglenketyper), men generelt er inntrykket at modell og datauttak ikke tar tilstrekkelig høyde for driftsutgifter langs vegnett for gående og syklende. For eksempel filtreringen på bru, rekkverk og lyspunkt (belysningspunkt). 
   * **NVDB er ikke masterdata for bru og kai**. Fagdata om bruer og kaier blir forvaltet i fagsystemet Brutus, som maskinelt ajourholder objekttypen 60 Bru i NVDB parallelt med at fagpersoner jobber i Brutus. NVDB har på mange måter et forenklet datasett relativt til Brutus. Den Brutus-eksperten jeg jobber med mener et datauttak direkte fra Brutus hadde gitt et riktigere resultat, både for bru, ferjekai og tilleggskai, uten at jeg skal prøve å gjengi dette resonementet her. 
     * Personlig mener jeg at hvis man tar et aktivt valg om at kun NVDB skal være datakilde, ikke Brutus, så burde man gjort noen regneøvelser og tallfestet / kvalitetssikret at aktuelle valg med filtrering etc gir et riktigst mulig bilde. 
   * **Ferjekaibru og tilleggskai** På side 44 er en detaljert oppskrift som viser datauttak av objekttypen 60 Bru på fylkesveg, etterfulgt av filtrering på egenskapsverdiene brukategori=Ferjeleie og byggverkstype lik en av Ferjekaibru (810), Ferjekaibru (811), Ferjekaibru (812), Kai (820), Tilleggskai (822), Tilleggskai (823) eller Tilleggskai (824). 
