@@ -12,6 +12,16 @@ Her er Lødingen ferjekai slik den er modellert i dag, med et objekt av typen 41
 
 Her er Lødingen ferjekai modellert i 2015, uten ferjeoppstillingsplass-objekt, men med et mer komplisert vegnett og cirka en kilometer lengre verdi for _feltlengde_. Ferjeoppstillingsplasser er her modellert med kjørefelttypen O på vegnettet. [Vegkart-søk](https://vegkart.atlas.vegvesen.no/#kartlag:nib/@540733,7590055,15/vegnett:metrering~+()~/vegsystemreferanse:541194.761:7590049.972/n%C3%A5r:*2015-08-30~) 
 ![Lødingen ferjekai i 2015](./bilder/lødingenFK-2015.png)
+  * **Vegutstyr langs gang- og sykkelveger** Joda, gang- og sykkelveger er beskrevet som en egen parameter. 
+    * Men når vi ser på datauttaket av rekkverk, belysningspunkt og bru så er inntrykket like fullt at budsjettmodellen ikke i tilstrekkelig grad tar høyde for driftsutgifter langs gang- og sykkelveger. 
+    * For gående og syklende har det også vært en tilvekst av mulige veglenketyper (type veg). I tillegg til _Gang og sykkelveg_ har vi blant annet disse: 
+      * Gangveg
+      * Sykkelveg 
+      * Gangfelt 
+      * Trapp
+    * For meg er det iallfall opplagt at denne typen revisjon av vegnettsmodell burde utløse en revisjon av datauttak og budsjettmodell. Dette virker kanskje pirkete, men det er opplagt driftsutgifter knyttet til vegutstyr og brøyting langs disse veglenketypene.   
+  * **Lyspunkt i dagen** Her gjøres det en raffinert filtrering på egenskapen _Bruksområde_ til objekttypen _Belysningspunkt_: 7 av 16 mulige verdier + mangler verdi. Burde dette filteret vært revidert?  
+    * Burde f.eks bruksområde = _Belysning gang/sykkelveg_ vært med? 
   * **Konnekteringslenker**: Lengde vegnett og feltlengde – her pleier vi NVDB-fagfolk la være å telle konnekteringslenker, som er biten mellom vegkant og senterlinje i vegkryss, dvs den biten som «mangler» når en veg skal knyttes sammen med en annen. Disse utgjør erfaringsmessig cirka en halv prosent av lengden vegnettet. For fylkesveger utgjør konnekteringslenkene cirka 57 km. Vestland fylke har mest (8,2km), fulgt av nye Innlandet (7,5km). Ikke all verden betydning, men det hadde vært greit å være konsistent med f.eks KOSTRA-rapportering.
   * **Objektypen 616 Feltstrekning** er ikke lenger orginaldata for kjørefelt, men blir nå lagret på veglenkene i NVDB. Av hensyn til gamle klienter er objekttype 616 videreført, så joda – det vil for så vidt fungere å gjøre slik som foreslått. Men her burde metodikken vært oppdatert med modellendringer og endret dataforvaltning i NVDB: Det er enklere, mer robust og riktigere å analysere vegnettsdata direkte enn å hente vegnettsdata indirekte via objekttypen 616 Feltstrekning. 
     * For eksempel er det krevende å skille ut bilferjer og konnekteringslenker via den foreslåtte metoden på s36., mens det er enkelt hvis man maskinelt henter vegnettsdata direkte fra NVDB api. 
