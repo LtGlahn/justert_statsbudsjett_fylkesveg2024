@@ -17,8 +17,8 @@ Min evaluering av datauttaket i juni, der jeg avdekket flere feil, er i [dette P
 | Lyspunkt i dagen (antall)	| Ingen |  | 
 | Lengde ikke-undersjøiske tunnelløp (m)	| Stor | Feil på summering av lengde-egenskap  | 
 | Lengde undersjøiske tunnelløp (m)	| Bagatellmessig | Samme feil, men lite utslag | 
-| Lengde bruer av stål (m)	| Stor | Cirka 3% | 
-| Lengde bruer av andre materialtyper enn stål (m)	| Stor | Cirka 6% | 
+| Lengde bruer av stål (m)	| Stor | Ikke bruke BRUTUS-data, men NVDB | 
+| Lengde bruer av andre materialtyper enn stål (m)	| Stor | Ikke bruke BRUTUS-data, men NVDB | 
 | Ferjekaibruer og tilleggskaier (antall)	G/S-veglengde (km)	| Ingen |  | 
 | Veg med fartsgrense 50 km/t eller lavere (km)| Ingen |  | 
 
